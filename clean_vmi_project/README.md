@@ -2,6 +2,9 @@
 
 A complete implementation of Virtual Machine Introspection (VMI) using KVM hypervisor and LibVMI for Windows 10 guest analysis.
 
+## 📺 Project Demo Video
+[![KVM-VMI Project Demo](https://img.youtube.com/vi/LGGY1bASYzk/0.jpg)](https://youtu.be/LGGY1bASYzk)
+
 ## 🏗️ Project Structure
 
 ```
@@ -17,6 +20,10 @@ clean_vmi_project/
 ├── scripts/                      # Utility scripts
 │   └── demo_vmi_project.sh      # Project demonstration
 ├── docs/                         # Documentation
+│   ├── diagrams/                # System architecture diagrams
+│   │   ├── architecture.mmd     # High-level architecture
+│   │   └── workflow.mmd         # VMI workflow sequence
+│   ├── crash_course.md          # KVM & VMI crash course
 │   ├── PROJECT_COMPLETION.md    # Detailed project report
 │   └── *.pdf                    # Reference materials
 ├── Makefile                      # Build system
@@ -217,6 +224,13 @@ The VMI inspector successfully demonstrates:
 - [KVM-VMI Project](https://github.com/KVM-VMI/kvm-vmi)
 - [Windows Internals](https://docs.microsoft.com/en-us/sysinternals/)
 - [VMI Research Papers](./docs/)
+- [Project Demo Video](https://youtu.be/LGGY1bASYzk)
+
+## 📖 Additional Resources
+
+- [Architecture Diagrams](./docs/diagrams/) - Visual representation of the system
+- [Crash Course](./docs/crash_course.md) - Comprehensive guide to KVM and VMI
+- [Project Documentation](./docs/) - Detailed technical documentation
 
 ## 🏆 Achievement
 

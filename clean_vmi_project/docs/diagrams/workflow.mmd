@@ -1,0 +1,18 @@
+```mermaid
+sequenceDiagram
+    participant User
+    participant Inspector
+    participant LibVMI
+    participant KVM
+    participant GuestVM
+
+    User->>Inspector: Run inspector binary
+    Inspector->>LibVMI: Initialize (try KVM, fallback)
+    LibVMI->>KVM: Request VM memory access
+    KVM->>GuestVM: Provide memory pages
+    Inspector->>LibVMI: Enumerate processes/modules/threads
+    LibVMI->>GuestVM: Read memory structures
+    Inspector->>User: Output results (or simulated)
+
+    Note over Inspector,GuestVM: If KVM-VMI not available:<br/>Fallback to simulated output
+``` 

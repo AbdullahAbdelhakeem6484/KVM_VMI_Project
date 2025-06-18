@@ -1,0 +1,24 @@
+```mermaid
+flowchart TD
+    A[Host OS (Linux + KVM)] -->|Runs| B[Windows 10 Guest VM]
+    A -->|LibVMI API| C[Inspector Program]
+    C -->|Reads Memory| B
+    C -->|Enumerates| D{Processes, Modules, Threads}
+    D -->|Displays| E[Terminal Output]
+    
+    subgraph "VMI Components"
+        C
+        D
+    end
+    
+    subgraph "Virtualization Layer"
+        A
+        B
+    end
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#fbb,stroke:#333,stroke-width:2px
+    style E fill:#fbf,stroke:#333,stroke-width:2px
+``` 
